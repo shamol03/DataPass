@@ -1,0 +1,1156 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/29/2022 7:46:42 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-85ELA62"
+  DTS:CreatorName="DESKTOP-85ELA62\Rowson"
+  DTS:DTSID="{580FA3A6-7AD6-4161-AC17-DFA015EB592D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{7EDBB9EA-8635-4D6E-9537-BC22DA60FBAD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-85ELA62.125007]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0EFB5554-5B5F-464A-85D9-016DCA517759}"
+      DTS:ObjectName="DESKTOP-85ELA62.125007">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-85ELA62;Initial Catalog=125007;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-85ELA62\SDB.AdventureWorks2012]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F4F1ABFC-705D-4FBA-B172-853049B4CB5C}"
+      DTS:ObjectName="DESKTOP-85ELA62\SDB.AdventureWorks2012">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-85ELA62\SDB;Initial Catalog=AdventureWorks2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Error_Output]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7557F3CC-327F-49CC-A76E-DA1A987DEFA1}"
+      DTS:ObjectName="Error_Output">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\Class_Details\SQL_Server\ITExert_BD\Class_Details\SQL_BI\Practice\DataPass\Erroroutput.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="64"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Branch_Name"
+              DTS:DTSID="{258D24F8-DBBD-4119-A97E-3F5DEA4B4936}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="8"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Branch_Officer"
+              DTS:DTSID="{E10677AB-14E1-4C4B-BD9D-2BEF1EC12011}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No_Clients"
+              DTS:DTSID="{54C1EA56-FED0-4316-9ED6-45039E764F43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{3F32391F-E983-41EF-887D-485F0227AF69}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Avg_Age"
+              DTS:DTSID="{491993F5-0C69-454B-8641-791F6CCFD5C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Savings"
+              DTS:DTSID="{88822C46-2F3A-41AE-A41A-5B5F02C18669}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Savings_Status"
+              DTS:DTSID="{0DB69485-70DF-49F5-860B-A414A50C03FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Loan_Amount"
+              DTS:DTSID="{00903CC3-FEAD-4761-9750-8FFA9F6CFE63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total_Loan_OS"
+              DTS:DTSID="{2960DA49-AB88-4292-AD26-2F0CF9C7552D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Recoverable_Amount"
+              DTS:DTSID="{C0EF153B-4498-4F90-B130-7A0DCE7E3339}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{B90AD1D1-ED8F-42D8-B5E2-A847DA858CD6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{78B203C8-945D-4A7C-A0F8-974FB08D23E3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data source from DB 125007"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{995336DC-4D10-4F54-8C47-157B7AB0BEDE}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data source from DB 125007"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data source from DB 125007\DataTrnsformation"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="DataTrnsformation"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data source from DB 125007\DataTrnsformation.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data source from DB 125007\DataTrnsformation.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data source from DB 125007\DataTrnsformation.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data source from DB 125007\DataTrnsformation.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data source from DB 125007\DataTrnsformation.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\DataTrnsformation.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\DataTrnsformation.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\DataTrnsformation.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\DataTrnsformation.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data source from DB 125007\Error Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Error Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data source from DB 125007\Error Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Error_Output]"
+                  connectionManagerRefId="Package.ConnectionManagers[Error_Output]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Branch_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="64"
+                      cachedName="Branch_Name"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Branch_Name]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Branch_Name]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Branch_Officer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Branch_Officer"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Branch_Officer]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Branch_Officer]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[No_Clients]"
+                      cachedDataType="i4"
+                      cachedName="No_Clients"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[No_Clients]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[No_Clients]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="gender"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Avg_Age]"
+                      cachedDataType="i4"
+                      cachedName="Avg_Age"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Avg_Age]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Avg_Age]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Total_Savings]"
+                      cachedDataType="r8"
+                      cachedName="Total_Savings"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Total_Savings]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Savings]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Savings_Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Savings_Status"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Savings_Status]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Savings_Status]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Total_Loan_Amount]"
+                      cachedDataType="r8"
+                      cachedName="Total_Loan_Amount"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Total_Loan_Amount]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Loan_Amount]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Total_Loan_OS]"
+                      cachedDataType="r8"
+                      cachedName="Total_Loan_OS"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Total_Loan_OS]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Loan_OS]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[Recoverable_Amount]"
+                      cachedDataType="r8"
+                      cachedName="Recoverable_Amount"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Recoverable_Amount]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Recoverable_Amount]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Branch_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="64"
+                      name="Branch_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Branch_Officer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Branch_Officer" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[No_Clients]"
+                      dataType="i4"
+                      name="No_Clients" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Avg_Age]"
+                      dataType="i4"
+                      name="Avg_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Total_Savings]"
+                      dataType="r8"
+                      name="Total_Savings" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Savings_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Savings_Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Total_Loan_Amount]"
+                      dataType="r8"
+                      name="Total_Loan_Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Total_Loan_OS]"
+                      dataType="r8"
+                      name="Total_Loan_OS" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[Recoverable_Amount]"
+                      dataType="r8"
+                      name="Recoverable_Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data source from DB 125007\OLE DB Destination Another server"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination Another server"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[DataPass]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data source from DB 125007\OLE DB Destination Another server.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-85ELA62\SDB.AdventureWorks2012]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-85ELA62\SDB.AdventureWorks2012]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Branch_Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="64"
+                      cachedName="Branch_Name"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Branch_Name]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Branch_Name]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Branch_Officer]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="8"
+                      cachedName="Branch_Officer"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Branch_Officer]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Branch_Officer]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[No_Clients]"
+                      cachedDataType="i4"
+                      cachedName="No_Clients"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[No_Clients]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[No_Clients]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="gender"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[gender]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Avg_Age]"
+                      cachedDataType="i4"
+                      cachedName="Avg_Age"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Age]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Avg_Age]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Total_Savings]"
+                      cachedDataType="r8"
+                      cachedName="Total_Savings"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Total_Savings]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Savings]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Savings_Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Savings_Status"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Savings_Status]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Savings_Status]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Total_Loan_Amount]"
+                      cachedDataType="r8"
+                      cachedName="Total_Loan_Amount"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Total_Loan_Amount]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Loan_Amount]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Total_Loan_OS]"
+                      cachedDataType="r8"
+                      cachedName="Total_Loan_OS"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Total_Loan_OS]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Loan_OS]" />
+                    <inputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].Columns[Recoverable_Amount]"
+                      cachedDataType="r8"
+                      cachedName="Recoverable_Amount"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Recoverable_Amount]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Recoverable_Amount]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Branch_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="64"
+                      name="Branch_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Branch_Officer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Branch_Officer" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[No_Clients]"
+                      dataType="i4"
+                      name="No_Clients" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Avg_Age]"
+                      dataType="i4"
+                      name="Avg_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Total_Savings]"
+                      dataType="r8"
+                      name="Total_Savings" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Savings_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Savings_Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Total_Loan_Amount]"
+                      dataType="r8"
+                      name="Total_Loan_Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Total_Loan_OS]"
+                      dataType="r8"
+                      name="Total_Loan_OS" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input].ExternalColumns[Recoverable_Amount]"
+                      dataType="r8"
+                      name="Recoverable_Amount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data source from DB 125007\OLE DB Destination Another server.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\OLE DB Destination Another server.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Destination Another server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\OLE DB Destination Another server.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data source from DB 125007\OLE DB Source DB 125007"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source DB 125007"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">WITH MIS_Report AS 
+(
+	---MIS Report
+	SELECT 
+	a.Branch_Name, a.Branch_Officer, count(a.Branch_Name) No_Clients,a.gender,sum(a.age)/count(a.Branch_Name) Avg_Age
+	FROM (
+	SELECT 
+	concat(rtrim(d.CenterName),'(',d.CenterId,')') Branch_Name,concat(rtrim(a.NameTitle),' ',rtrim(a.Longname)) Full_name,
+	a.CustNo,c.CRS Branch_Officer, b.SexCode gender,dbo.fc_age(DOB) age 
+	FROM D009011 a INNER JOIN D009012 b ON a.CustNo=b.CustNo AND a.IndOth=1
+	INNER JOIN D009015 c ON a.CustNo=c.CustNo
+	INNER JOIN D001006 d ON c.CenterId=d.CenterId
+	) a
+	GROUP BY a.Branch_Name, a.Branch_Officer,a.gender
+),
+--SELECT * FROM MIS_Report
+   		Savings_Status AS
+		(
+		SELECT concat(rtrim(b.CenterName),'(',b.CenterId,')') Branch_Name,sum(c.ShdClrBalFcy) Total_Savings,
+		CASE 
+			WHEN  sum(c.ShdClrBalFcy)&gt;200000 THEN 'No Risk'
+			WHEN  sum(c.ShdClrBalFcy)BETWEEN 200000 AND 100000 THEN 'Risk'
+			WHEN  sum(c.ShdClrBalFcy)&lt;200000 THEN ' High Risk'
+			ELSE 'NA'
+		END AS Savings_Status
+		FROM D009015 a JOIN D001006 b ON a.CenterId=b.CenterId AND a.IndOth=1
+		INNER JOIN d009022 c ON a.CustNo=c.CustNo
+		WHERE left(c.PrdAcctId,2)='13' 
+		GROUP BY concat(rtrim(b.CenterName),'(',b.CenterId,')')
+		),
+--SELECT * FROM Savings_Status
+
+
+		Loan_Information  AS
+		(
+		SELECT 
+		concat(rtrim(b.CenterName),'(',b.CenterId,')') Branch_Name, sum(d.DisbursedAmtFcy) Total_Loan_Amount,
+		abs(sum(c.ShdClrBalFcy)) Total_Loan_OS, sum(d.DisbursedAmtFcy)+sum(c.ShdClrBalFcy) Recoverable_Amount
+		FROM 
+		D009015 a JOIN D001006 b ON a.CenterId=b.CenterId AND a.IndOth=1
+		INNER JOIN d009022 c ON a.CustNo=c.CustNo
+		INNER JOIN d030003 d ON d.PrdAcctId=c.PrdAcctId AND c.LBrCode=d.LBrCode
+		WHERE left(c.PrdAcctId,2)='23' 
+		GROUP BY concat(rtrim(b.CenterName),'(',b.CenterId,')')
+		)
+		
+SELECT 
+a.*,b.Total_Savings,b.Savings_Status,c.Total_Loan_Amount,c.Total_Loan_OS,c.Recoverable_Amount
+FROM 
+MIS_Report a INNER JOIN  Savings_Status b ON a.Branch_Name=b.Branch_Name
+INNER JOIN Loan_Information c ON c.Branch_Name=a.Branch_Name</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-85ELA62.125007]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-85ELA62.125007]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Branch_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Branch_Name]"
+                      length="64"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Branch_Name]"
+                      name="Branch_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Branch_Officer]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Branch_Officer]"
+                      length="8"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Branch_Officer]"
+                      name="Branch_Officer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[No_Clients]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[No_Clients]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[No_Clients]"
+                      name="No_Clients"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[gender]"
+                      length="2"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[gender]"
+                      name="gender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Avg_Age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Avg_Age]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Avg_Age]"
+                      name="Avg_Age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Savings]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Total_Savings]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Savings]"
+                      name="Total_Savings"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Savings_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Savings_Status]"
+                      length="10"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Savings_Status]"
+                      name="Savings_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Loan_Amount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Total_Loan_Amount]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Loan_Amount]"
+                      name="Total_Loan_Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Loan_OS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Total_Loan_OS]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Total_Loan_OS]"
+                      name="Total_Loan_OS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Recoverable_Amount]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Recoverable_Amount]"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].Columns[Recoverable_Amount]"
+                      name="Recoverable_Amount"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Branch_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="64"
+                      name="Branch_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Branch_Officer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      name="Branch_Officer" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[No_Clients]"
+                      dataType="i4"
+                      name="No_Clients" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Avg_Age]"
+                      dataType="i4"
+                      name="Avg_Age" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Total_Savings]"
+                      dataType="r8"
+                      name="Total_Savings" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Savings_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Savings_Status" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Total_Loan_Amount]"
+                      dataType="r8"
+                      name="Total_Loan_Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Total_Loan_OS]"
+                      dataType="r8"
+                      name="Total_Loan_OS" />
+                    <externalMetadataColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output].ExternalColumns[Recoverable_Amount]"
+                      dataType="r8"
+                      name="Recoverable_Amount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Branch_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="64"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Branch_Name]"
+                      name="Branch_Name" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Branch_Officer]"
+                      codePage="1252"
+                      dataType="str"
+                      length="8"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Branch_Officer]"
+                      name="Branch_Officer" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[No_Clients]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[No_Clients]"
+                      name="No_Clients" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[gender]"
+                      name="gender" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Avg_Age]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Avg_Age]"
+                      name="Avg_Age" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Savings]"
+                      dataType="r8"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Savings]"
+                      name="Total_Savings" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Savings_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Savings_Status]"
+                      name="Savings_Status" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Loan_Amount]"
+                      dataType="r8"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Loan_Amount]"
+                      name="Total_Loan_Amount" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Loan_OS]"
+                      dataType="r8"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Total_Loan_OS]"
+                      name="Total_Loan_OS" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Recoverable_Amount]"
+                      dataType="r8"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[Recoverable_Amount]"
+                      name="Recoverable_Amount" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data source from DB 125007.Paths[Derived Column Output]"
+              endId="Package\Data source from DB 125007\OLE DB Destination Another server.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data source from DB 125007\DataTrnsformation.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data source from DB 125007.Paths[OLE DB Source Error Output]"
+              endId="Package\Data source from DB 125007\Error Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Error Output"
+              startId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Error Output]" />
+            <path
+              refId="Package\Data source from DB 125007.Paths[OLE DB Source Output]"
+              endId="Package\Data source from DB 125007\DataTrnsformation.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data source from DB 125007\OLE DB Source DB 125007.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Data source from DB 125007"
+          TopLeft="54,15" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data source from DB 125007">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="215,42"
+          Id="Package\Data source from DB 125007\OLE DB Source DB 125007"
+          TopLeft="6,5" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Data source from DB 125007\Error Destination"
+          TopLeft="326,62" />
+        <EdgeLayout
+          Id="Package\Data source from DB 125007.Paths[OLE DB Source Error Output]"
+          TopLeft="221,26">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105,57"
+              Start="0,0"
+              End="97.5,57">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="48.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.5,0"
+                    Point2="52.5,0"
+                    Point3="52.5,4" />
+                  <mssgle:LineSegment
+                    End="52.5,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="52.5,53"
+                    Point2="52.5,57"
+                    Point3="56.5,57" />
+                  <mssgle:LineSegment
+                    End="97.5,57" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.93390625,-17.43359375,126.8678125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Data source from DB 125007\DataTrnsformation"
+          TopLeft="142,107" />
+        <EdgeLayout
+          Id="Package\Data source from DB 125007.Paths[OLE DB Source Output]"
+          TopLeft="113.5,47">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="113.5,60"
+              Start="0,0"
+              End="113.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="109.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="109.5,30"
+                    Point2="113.5,30"
+                    Point3="113.5,34" />
+                  <mssgle:LineSegment
+                    End="113.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="252,42"
+          Id="Package\Data source from DB 125007\OLE DB Destination Another server"
+          TopLeft="355,185" />
+        <EdgeLayout
+          Id="Package\Data source from DB 125007.Paths[Derived Column Output]"
+          TopLeft="227,149">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="254,36"
+              Start="0,0"
+              End="254,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14"
+                    Point2="0,18"
+                    Point3="4,18" />
+                  <mssgle:LineSegment
+                    End="250,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="250,18"
+                    Point2="254,18"
+                    Point3="254,22" />
+                  <mssgle:LineSegment
+                    End="254,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data source from DB 125007\OLE DB Source DB 125007">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data source from DB 125007\OLE DB Destination Another server">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
